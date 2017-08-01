@@ -2,6 +2,7 @@ var mysql = require("mysql");
 var inquirer = require("inquirer");
 require("console.table");
 
+// Initializes the connection variable to sync with a MySQL database
 var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
@@ -13,14 +14,15 @@ var connection = mysql.createConnection({
   password: "English2h!",
   database: "bamazon"
 });
-	connection.connect(function(err) {
-		if(err){
-			console.log(err);
-		};
 
-   console.log("connection successful!")
-   showProducts();
-	 });
+//Connecting to the mySQL database, which is listening on port 3306
+connection.connect(function(err) {
+	if(err){	
+  	console.log(err);
+	};
+    console.log("connection successful!")
+    showProducts();
+});
 
 
 function showProducts() {
@@ -29,6 +31,7 @@ function showProducts() {
         if (err) throw err;
         // Log all results of the SELECT statement
         console.table(res);
+        askQuestion();
         connection.end();
       });
     }    
@@ -38,9 +41,11 @@ function askQuestion(){
     inquirer.prompt([
       {
         name: "id",
+        type: "input",
         message: "What is the ID of the product you wish to purchase?"
       }, {
         name: "quantity",
+        type: "input",
         message: "Please enter the quantity of the item you wish to purchase."
       }
     ]).then(function(answers) {
