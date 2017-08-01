@@ -36,7 +36,7 @@ function showProducts() {
       });
     }    
 
-function askForId(){
+function askForId(inventory){
 
     inquirer.prompt([
       {
@@ -44,7 +44,7 @@ function askForId(){
         type: "input",
         message: "What is the ID of the product you wish to purchase?"
       }
-    ]).then(function(answers) {
+    ]).then(function(val) {
 
     });
   }
@@ -56,7 +56,19 @@ function askForQuantity(){
         type: "input",
         message: "Please enter the quantity of the item you wish to purchase."
     }
-  ]).then(function(answers){
-    
+  ]).then(function(quantity){
+
   })
+}
+
+function makePurchase(){
+
+}
+
+function checkInventory(){
+
+}
+
+function userExit(){
+  
 }
