@@ -36,25 +36,27 @@ function showProducts() {
       });
     }    
 
-function askQuestion(){
+function askForId(){
 
     inquirer.prompt([
       {
         name: "id",
         type: "input",
         message: "What is the ID of the product you wish to purchase?"
-      }, {
-        name: "quantity",
-        type: "input",
-        message: "Please enter the quantity of the item you wish to purchase."
       }
     ]).then(function(answers) {
 
     });
   }
 
-//    Then create a Node application called bamazonCustomer.js. 
-//Running this application will first display all of the items available for sale. Include the ids, names, and prices of products for sale.
-// The app should then prompt users with two messages.
-// The first should ask them the ID of the product they would like to buy.
-// The second message should ask how many units of the product they would like to buy.
+function askForQuantity(){
+  inquirer.prompt([ 
+    {
+        name: "quantity",
+        type: "input",
+        message: "Please enter the quantity of the item you wish to purchase."
+    }
+  ]).then(function(answers){
+    
+  })
+}
