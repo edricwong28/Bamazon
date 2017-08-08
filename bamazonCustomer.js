@@ -58,6 +58,15 @@ function askCustomerforItem(inventory) {
     });
 }
 
+function checkInventory(choiceId, res) {
+  for (var i = 0; i < res.length; i++) {
+    if (res[i].item_id === choiceId) {
+      return res[i];
+    }
+  }
+  return null;
+}
+
 function askQuantity(product) {
   inquirer
     .prompt([
@@ -95,18 +104,10 @@ function makePurchase(product, quantity) {
   );
 }
 
-function checkInventory(choiceId, res) {
-  for (var i = 0; i < res.length; i++) {
-    if (res[i].item_id === choiceId) {
-      return res[i];
-    }
-  }
-  return null;
-}
 
 function quit(choice) {
   if (choice.toLowerCase() === "q") {
-    console.log("Goodbye!");
+    console.log("You have exited the program Successfully");
     process.exit(0);
   }
 }
