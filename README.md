@@ -7,3 +7,6 @@ Upon Running the Program, the user is prompted to select an item.
 After the item is selected, the user is prompted to select the quantity of the item, and once purchased, the inventory will update. 
 ![2017-10-24 2](https://user-images.githubusercontent.com/24421342/31962822-75f465bc-b8b3-11e7-87ec-23e6a942b7b5.png)
 
+The user can continue shopping, or quit with pressing Q.
+![2017-10-24 4](https://user-images.githubusercontent.com/24421342/31962926-d334e62a-b8b3-11e7-9b3b-e81197b73dcf.png)
+
